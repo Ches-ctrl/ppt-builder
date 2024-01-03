@@ -1,8 +1,8 @@
 from pptx import Presentation
 
 # Load the source and destination presentations
-source_presentation = Presentation('source_presentation.pptx')
-destination_presentation = Presentation('destination_presentation.pptx')
+source_presentation = Presentation('templates/Consulting_Template_2.pptx')
+destination_presentation = Presentation('outputs/Copied_File.pptx')
 
 # Choose the slide to copy (e.g., slide 1)
 source_slide = source_presentation.slides[0]
@@ -22,4 +22,4 @@ for source_shape in source_slide.shapes:
         new_shape.text = source_shape.text
 
 # Save the destination presentation
-destination_presentation.save('output_presentation.pptx')
+destination_presentation.save('outputs/output_presentation.pptx')
